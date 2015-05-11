@@ -15,7 +15,7 @@ type DB struct {
 }
 
 // warning: fails to catch 2015-02-31 etc.
-var dateRegexp = regexp.MustCompile(`^(\d{4})-(0[1-9]|1[0-2])-([0-2][1-9]|3[01])$`)
+var dateRegexp = regexp.MustCompile(`^(\d{4})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$`)
 
 func validDate(date string) bool {
 	return dateRegexp.MatchString(date)
